@@ -1,31 +1,102 @@
-header {
-	height: 80vh;
-	border-bottom: 4px solid black;
+body {
+	overflow: hidden;
+	-ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none;  /* Hide scrollbar for Firefox */
 }
 
-#frontpage {
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#wrapper {
+	width: 100vw;
+	min-height: 100vh;
+	overflow: hidden;
+	background-image: url("../images/background_bamboo.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	text-align: center;
+	font-family: 'Sumana', serif;
+}
+
+nav {
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 2vw;
+	z-index: 1;
+	height: 60vh;
+	width: 96vw;
+	background: linear-gradient(to top left, #aa8888ff 0%, #f0d9f1 100%);
+}
+
+.screenview {
+	height: 86vh;
+	width: 100vw;
+	margin-top: 7vh;
+	margin-bottom: 7vh;
 	background: linear-gradient(to bottom left, rgba(76, 94, 106, 1) -50%, rgba(166, 139, 139, 1) 100%);
 	display: grid;
-	padding: 20px;
-	grid-gap: 10px;
-	grid-template-rows: 40% 30% 30%;
-	text-align: center;
-	align-content: center;
+	place-items: center;
 }
 
-header .grid-1 {
-	grid-row: 1;
+#intro-page {
+	grid-template-rows: auto;
+	grid-template-columns: 100%;
 }
 
-header .grid-2 {
-	grid-row: 2;
+#intro-page h1 {
+	font-family: 'Sorts Mill Goudy', serif;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgb(33, 37, 41);
+	line-height: 130%;
+	padding: 5px;
 }
 
-header .grid-3 {
-	grid-row: 3;
+#intro-page hr {
+	height: 2px;
+	border: 0;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), black, rgba(0, 0, 0, 0));
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-img {
-	max-height: 90%;
-	border: solid black 2px;
+#intro-page .grid-2 {
+	background: lightgrey;
+	padding: 10px;
+}
+
+#intro-page .grid-1 img {
+	max-width: 95%;
+	max-height: 10vh;
+}
+
+#intro-page .grid-3 img {
+	max-height: 20vh;
+	border: solid 1px black;
+}
+
+main {
+	display: grid;
+	gap: 7vh;
+	grid-template-rows: 86vh auto;
+	grid-template-columns: 100%;
+	place-items: center;
+}
+
+header {
+	display: grid;
+}
+
+header h1 {
+	background-color: lightgrey;
+	padding: 10px;
+	font-style: italic;
+	font-weight: bold;
+	color: #100033FF;
+	font-size: 26px;
 }
