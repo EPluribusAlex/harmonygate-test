@@ -8,6 +8,7 @@
 
 	<!-- google fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Cormorant+Upright|IM+Fell+Great+Primer|Sorts+Mill+Goudy|Sumana" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<!-- local stylesheets -->
 	<link href="assets/css/reset.css" rel="stylesheet">
@@ -20,65 +21,89 @@
 
 		<!-- navbar -->
 		<nav>
-			<ul>
-				<li>
-					<img src="assets/images/lotus.svg">
-				</li>
-				<li>
-					<a href="index.html">
-						<span class="arrow-icon"></span>
-						Home
-					</a>
-				</li>
-				<li>
-					<a href="pages/furtherinfo.html">Further Information for Patients</a>
-				</li>			
-				<li>
-					<a href="pages/publicevents.html">Upcoming Public Events</a>
-				</li>	
-				<li>
-					<a href="pages/practbio.html">Practitioner Biographies</a>
-				</li>				
-				<li>
-					<a href="pages/location.html">Location</a>
-				</li>
-				<li>
-					<a href="pages/articles.html">Articles & Publications</a>
-				</li>
-				<li>
-					<a href="pages/continuing.html">Continuing Education</a>
-				</li>
-			</ul>
-		</nav>
 
-		<section class="screenview" id="intro-page">
-
-			<div class="grid-1">
-				<img src="assets/images/5ElementBanner.jpg" alt="*">
+			<div id="navmenu">
+				<img src="assets/images/lotus.svg">
+				<ul>
+					<li>
+						<a href="index.html">
+							<span class="material-icons">keyboard_arrow_right</span>
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="pages/furtherinfo.html">Further Information for Patients</a>
+					</li>			
+					<li>
+						<a href="pages/publicevents.html">Upcoming Public Events</a>
+					</li>	
+					<li>
+						<a href="pages/practbio.html">Practitioner Biographies</a>
+					</li>				
+					<li>
+						<a href="pages/location.html">Location</a>
+					</li>
+					<li>
+						<a href="pages/articles.html">Articles & Publications</a>
+					</li>
+					<li>
+						<a href="pages/continuing.html">Continuing Education</a>
+					</li>
+				</ul>
+			</div>
+			<div id="navbutton">
+				<span class="material-icons">menu</span>
 			</div>
 
-			<div class="grid-2">
-				<h1>Five Element Acupuncture</h1>
-				<hr>
-				<h1>Integration of Body-Mind-Spirit According to the Classics of Chinese Medicine</h1>
-			</div>
-
-			<div class="grid-3">
-				<img src="assets/images/harmonygate_icon.jpg" alt="*">
-			</div>
-
-		</section>
+		</nav>	
 		<main>
 
-			<header class="screenview grid-1">
+			<section class="screenview grid-1">
+
+				<div class="grid-1">
+					<img src="assets/images/5ElementBanner.jpg" alt="*">
+				</div>
+
+				<div class="grid-2">
+					<h1>Five Element Acupuncture</h1>
+					<hr>
+					<h1>Integration of Body-Mind-Spirit According to the Classics of Chinese Medicine</h1>
+				</div>
+
+				<div class="grid-3">
+					<img src="assets/images/harmonygate_icon.jpg" alt="*">
+				</div>
+
+			</section>
+			<section class="screenview grid-2">
 
 				<h1>Classical Acupuncture at Harmony Gate</h1>
+				<a href="pages/location.html">1410 Broad Street, Durham</a>
+				<div class="img-div">
+					<img src="assets/images/harmonygate4.jpg" alt="">
+				</div>
+				<div id="changing-textbox">
+				</div>
+				<div id="img-select">
+					<span class="material-icons" id="back-arrow">arrow_backward</span>
+					<img src="assets/images/taijiwuhsingcolor.jpg" alt="*">
+					<span class="material-icons" id="forward-arrow">arrow_forward</span>
+				</div>
+				<div id="descriptive-text-2">
+					
+				</div>
 			
-			</header>
+			</section>
 
 		</main>
 
 	</div>
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+	<!-- local js -->
+	<script src="assets/js/index.js"></script>
 
 </body>
 </html>

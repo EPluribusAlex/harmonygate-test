@@ -1,5 +1,5 @@
 body {
-	overflow: hidden;
+	/* overflow: hidden; */
 	-ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
   scrollbar-width: none;  /* Hide scrollbar for Firefox */
 }
@@ -18,45 +18,97 @@ body::-webkit-scrollbar {
 	background-attachment: fixed;
 	text-align: center;
 	font-family: 'Sumana', serif;
+	color: rgb(33, 37, 41);
+}
+
+a {
+	color: #100033FF;
+	text-decoration: none;
+}
+
+a:hover {
+	color:#BF231BFF;
 }
 
 nav {
-	visibility: hidden;
 	position: fixed;
-	top: 0;
-	left: 2vw;
+	top: -66vh;
+	left: 7vw;
+	width: 86vw;
 	z-index: 1;
-	height: 60vh;
-	width: 96vw;
-	background: linear-gradient(to top left, #aa8888ff 0%, #f0d9f1 100%);
+	height: 70vh;
+}
+
+#navmenu {
+	height: 65vh;
+	max-width: 800px;
+	margin: auto;
+	background: linear-gradient(to top, #aa8888ff, #f0d9f1);
+	border-bottom: ridge 3px black;
+	display: grid;
+	gap: 5px;
+	grid-template-columns: repeat(auto-fill, 200px);
+	place-content: center;
+	place-items: center;
+}
+
+#navmenu img {
+	max-width: 150px;
+}
+
+#navmenu li {
+	margin: 10px;
+}
+
+#navmenu a {
+	font-weight: bold;
+	display: inline-flex;
+  font-size: 16px;
+}
+
+#navbutton {
+	width: 25%;
+	height: 5vh;
+	margin: auto;
+	background-color: #aa8888ff;
+	border-bottom: outset 5px #f0d9f1;
+	border-radius: 1px 1px 10px 10px;
+}
+
+main {
+	display: grid;
+	gap: 7vh;
+	grid-template-rows: auto;
+	grid-template-columns: 100%;
+	place-items: center;
 }
 
 .screenview {
 	height: 86vh;
-	width: 100vw;
+	width: 100%;
 	margin-top: 7vh;
 	margin-bottom: 7vh;
 	background: linear-gradient(to bottom left, rgba(76, 94, 106, 1) -50%, rgba(166, 139, 139, 1) 100%);
 	display: grid;
+	gap: 10px;
 	place-items: center;
 }
 
-#intro-page {
+main > .grid-1 {
 	grid-template-rows: auto;
 	grid-template-columns: 100%;
 }
 
-#intro-page h1 {
+main > .grid-1 h1 {
 	font-family: 'Sorts Mill Goudy', serif;
 	font-style: italic;
 	font-weight: bold;
 	font-size: 20px;
-	color: rgb(33, 37, 41);
 	line-height: 130%;
 	padding: 5px;
 }
 
-#intro-page hr {
+main > .grid-1 hr {
 	height: 2px;
 	border: 0;
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), black, rgba(0, 0, 0, 0));
@@ -65,38 +117,64 @@ nav {
 	margin-right: auto;
 }
 
-#intro-page .grid-2 {
+main > .grid-1 .grid-2 {
+	width: 100%;
 	background: lightgrey;
 	padding: 10px;
 }
 
-#intro-page .grid-1 img {
+main > .grid-1 .grid-1 img {
 	max-width: 95%;
 	max-height: 10vh;
 }
 
-#intro-page .grid-3 img {
+main > .grid-1 .grid-3 img {
 	max-height: 20vh;
 	border: solid 1px black;
 }
 
-main {
-	display: grid;
-	gap: 7vh;
-	grid-template-rows: 86vh auto;
-	grid-template-columns: 100%;
-	place-items: center;
-}
-
-header {
-	display: grid;
-}
-
-header h1 {
+main > .grid-2 h1 {
+	width: 100%;
 	background-color: lightgrey;
 	padding: 10px;
 	font-style: italic;
 	font-weight: bold;
 	color: #100033FF;
 	font-size: 26px;
+}
+
+main > .grid-2 a {
+	font-family: 'IM Fell Great Primer', serif;
+	font-weight: bold;
+	font-size: 20px;
+	color: #591126FF;
+}
+
+main > .grid-2 .img-div {
+	width: 100%;
+	background-color: #f0d9f1
+}
+
+main > .grid-2 .img-div img {
+	max-height: 20vh;
+}
+
+#img-select img {
+	max-height: 5vh;
+	border: solid 1px #f0d9f1;
+	border-radius: 10px;
+}
+
+#changing-textbox {
+	width: 90%;
+	background: linear-gradient(to top left, #aa8888ff, #f0d9f1, #aa8888ff);
+	border: ridge 5px #f0d9f1;
+	padding: 5px;
+	font-style: italic;
+	font-weight: bold;
+	line-height: 120%;
+}
+
+#back-arrow {
+	display: none;
 }
