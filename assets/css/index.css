@@ -18,7 +18,7 @@ body::-webkit-scrollbar {
 	background-attachment: fixed;
 	text-align: center;
 	font-family: 'Sumana', serif;
-	color: rgb(33, 37, 41);
+	color: #343a40;;
 }
 
 a {
@@ -32,19 +32,19 @@ a:hover {
 
 nav {
 	position: fixed;
-	top: -66vh;
+	top: -86vh;
 	left: 7vw;
 	width: 86vw;
 	z-index: 1;
-	height: 70vh;
+	height: 90vh;
 }
 
 #navmenu {
-	height: 65vh;
+	height: 85vh;
 	max-width: 800px;
 	margin: auto;
-	background: linear-gradient(to top, #aa8888ff, #f0d9f1);
-	border-bottom: ridge 3px black;
+	background: linear-gradient(to top, rgba(170, 136, 136, 0.8), rgba(241, 218, 242, 0.8));
+	border-bottom: ridge 4px black;
 	display: grid;
 	gap: 5px;
 	grid-template-columns: repeat(auto-fill, 200px);
@@ -57,7 +57,11 @@ nav {
 }
 
 #navmenu li {
-	margin: 10px;
+	margin: 5px;
+	padding: 10px;
+	border: solid 1px grey;
+	background-color: rgba(170, 136, 136, 1);
+	border-radius: 1px 10px 1px 10px;
 }
 
 #navmenu a {
@@ -71,8 +75,13 @@ nav {
 	height: 5vh;
 	margin: auto;
 	background-color: #aa8888ff;
-	border-bottom: outset 5px #f0d9f1;
-	border-radius: 1px 1px 10px 10px;
+	border-bottom: outset 5px rgb(166, 139, 139);
+	border-left: inset 3px rgb(166, 139, 139);
+	border-right: outset 3px rgb(166, 139, 139);
+}
+
+#navbutton .material-icons {
+	color: black;
 }
 
 main {
@@ -150,16 +159,16 @@ main > .grid-2 a {
 	color: #591126FF;
 }
 
-main > .grid-2 .img-div {
+main > .grid-2 .img-div-1 {
 	width: 100%;
 	background-color: #f0d9f1
 }
 
-main > .grid-2 .img-div img {
+main > .grid-2 .img-div-1 img {
 	max-height: 20vh;
 }
 
-#img-select img {
+.img-div-2 img {
 	max-height: 5vh;
 	border: solid 1px #f0d9f1;
 	border-radius: 10px;
@@ -173,8 +182,4 @@ main > .grid-2 .img-div img {
 	font-style: italic;
 	font-weight: bold;
 	line-height: 120%;
-}
-
-#back-arrow {
-	display: none;
 }
