@@ -38,32 +38,23 @@ $(function () {
 		}
 	});
 
-	let textchanged = false;
+	let expanded = false;
 
-	$("#changing-textbox").text("In the Chinese medical classics, the human being is considered to be a microcosm of the external environment; hence we have within our biorhythmic time clock energetic changes throughout each day as well as throughout every season of the year . Just as the external environment requires a balance of nature in order to avoid catastrophe,...");
-
-	$("#changing-textbox").click(function() {
+	$("#expanding-textbox").click(function() {
 		
-		if(!textchanged) {
-			// $("#forward-arrow").fadeOut(function() {
-			// 	$("#back-arrow").fadeIn();
-			// });
-			$("#changing-textbox").fadeOut(function() {
-				$("#changing-textbox").text("...so also does the human body require balance in order to avoid or minimize disease. Five Element Acupuncture addresses disease and illness by way of recreating the natural balance among and between the elements within the human being as represented by associations with each organ system on a body/mind/spirit level.");
-				$("#changing-textbox").fadeIn();
-			});
-			
-			textchanged = true;
+		if(!expanded) {
+			$("main > .grid-2").height("auto");
+			$("#expanding-textbox").animate({height: "350px"});
+	    $("html, body").animate({
+	      scrollTop: $("#expanding-textbox").offset().top - 50
+	    	}, 1600);
+			expanded = true;
 		} else {
-			// $("#back-arrow").fadeOut(function() {
-			// 	$("#forward-arrow").fadeIn();
-			// });
-			$("#changing-textbox").fadeOut(function() {
-				$("#changing-textbox").text("In the Chinese medical classics, the human being is considered to be a microcosm of the external environment; hence we have within our biorhythmic time clock energetic changes throughout each day as well as throughout every season of the year . Just as the external environment requires a balance of nature in order to avoid catastrophe,...");
-				$("#changing-textbox").fadeIn();
-			});
-			textchanged = false;
+			$("main > .grid-2").height("");
+			$("#expanding-textbox").animate({height: "140px"});
+			expanded = false;
 		}
 
 	});
+
 });

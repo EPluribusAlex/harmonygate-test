@@ -59,7 +59,7 @@ nav {
 #navmenu li {
 	margin: 5px;
 	padding: 10px;
-	border: solid 1px grey;
+	border: solid 1px darkgrey;
 	background-color: rgba(170, 136, 136, 1);
 	border-radius: 1px 10px 1px 10px;
 }
@@ -142,8 +142,9 @@ main > .grid-1 .grid-3 img {
 	border: solid 1px black;
 }
 
-main > .grid-2 h1 {
+main > .grid-2 .grid-1 {
 	width: 100%;
+	align-self: start;
 	background-color: lightgrey;
 	padding: 10px;
 	font-style: italic;
@@ -169,13 +170,16 @@ main > .grid-2 .img-div-1 img {
 }
 
 .img-div-2 img {
-	max-height: 5vh;
+	max-height: 6vh;
+	margin-bottom: 10px;
 	border: solid 1px #f0d9f1;
 	border-radius: 10px;
 }
 
-#changing-textbox {
+#expanding-textbox {
 	width: 90%;
+	height: 140px;
+	overflow: hidden;
 	background: linear-gradient(to top left, #aa8888ff, #f0d9f1, #aa8888ff);
 	border: ridge 5px #f0d9f1;
 	padding: 5px;
